@@ -8,3 +8,10 @@ A simple TCP port scanner built using Python.
 - Custom port range
 - Adjustable timeout
 - Multi-threaded scanning
+
+## Technologies Used
+
+- socket
+- argparse
+- concurrent.futures (ThreadPoolExecutor)
+- datetime
