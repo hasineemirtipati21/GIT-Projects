@@ -15,3 +15,10 @@ A simple TCP port scanner built using Python.
 - argparse
 - concurrent.futures (ThreadPoolExecutor)
 - datetime
+
+## Usage
+
+Basic scan:
+
+```bash
+python portscan.py example.com
