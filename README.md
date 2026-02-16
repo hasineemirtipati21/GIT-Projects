@@ -22,3 +22,6 @@ Basic scan:
 
 ```bash
 python portscan.py example.com
+python portscan.py 192.168.1.10 --start 1 --end 1024
+python portscan.py 127.0.0.1 --start 79 --end 82 --workers 10 --timeout 0.5
+
