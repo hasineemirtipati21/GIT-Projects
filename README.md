@@ -33,4 +33,8 @@ python portscan.py 127.0.0.1 --start 79 --end 82 --workers 10 --timeout 0.5
 - --workers : Maximum worker threads (default: 100)
 - --timeout : Socket timeout in seconds (default: 1.0)
 
+## Legal Notice
+
+Only scan systems you own or have permission to test.
+Unauthorized scanning may violate laws or network policies.
 
