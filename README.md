@@ -38,3 +38,8 @@ python portscan.py 127.0.0.1 --start 79 --end 82 --workers 10 --timeout 0.5
 Only scan systems you own or have permission to test.
 Unauthorized scanning may violate laws or network policies.
 
+## Project Structure
+
+.
+├── portscan.py
+└── README.md
