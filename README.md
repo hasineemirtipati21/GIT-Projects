@@ -43,3 +43,9 @@ Unauthorized scanning may violate laws or network policies.
 .
 ├── portscan.py
 └── README.md
+
+## What I Learned
+
+- How TCP handshake works
+- How multithreading improves scan speed
+- Risks of excessive concurrency
