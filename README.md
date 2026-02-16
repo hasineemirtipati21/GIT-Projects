@@ -20,8 +20,17 @@ A simple TCP port scanner built using Python.
 
 Basic scan:
 
-```bash
+''bash
 python portscan.py example.com
 python portscan.py 192.168.1.10 --start 1 --end 1024
 python portscan.py 127.0.0.1 --start 79 --end 82 --workers 10 --timeout 0.5
+
+## Command-Line Options
+
+- target : Hostname or IP address
+- --start : Starting port (default: 1)
+- --end : Ending port (default: 65535)
+- --workers : Maximum worker threads (default: 100)
+- --timeout : Socket timeout in seconds (default: 1.0)
+
 
