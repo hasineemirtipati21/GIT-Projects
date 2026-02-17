@@ -126,3 +126,88 @@ firewall_rules = {
 IP_ADD: 192.168.1.12, ACTION: BLOCK, SYSTEM_ID: 9271
 IP_ADD: 192.168.1.3, ACTION: ALLOW, SYSTEM_ID: 1844
 IP_ADD: 192.168.1.8, ACTION: BLOCK, SYSTEM_ID: 5521
+
+##Project 3:
+# 🚨 Real-Time Network Packet Rate Monitor & Auto IP Blocker (Python)
+
+A real-time network monitoring tool built with Python and Scapy that detects high packet rates from source IP addresses and automatically blocks suspicious IPs using iptables.
+
+---
+
+## 📌 Project Overview
+
+This project monitors live network traffic and detects potential flooding or DoS-like behavior by calculating the packet rate per source IP address.
+
+If an IP exceeds the defined packet rate threshold, it is automatically blocked using:
+
+iptables firewall rule:
+DROP incoming traffic from that IP.
+
+---
+
+## ⚙️ Features
+
+- Real-time packet sniffing
+- Source IP tracking
+- Packet rate calculation (per second)
+- Automatic IP blocking
+- Root privilege verification
+- Uses Linux iptables for enforcement
+
+---
+
+## 🛠 Technologies Used
+
+- Python 3.x
+- Scapy (packet sniffing)
+- iptables (Linux firewall)
+- collections.defaultdict
+- time, os, sys modules
+
+---
+
+## 📂 Project Structure
+
+network-monitor/
+│
+├── monitor.py
+└── README.md
+
+---
+
+## 🚀 How It Works
+
+1. The script captures live IP packets using Scapy.
+2. It counts packets per source IP.
+3. Every 1 second:
+   - Packet rate = total packets / time interval
+4. If packet rate > THRESHOLD:
+   - The IP is blocked using:
+
+iptables -A INPUT -s <ip_address> -j DROP
+
+5. Blocked IPs are stored to avoid duplicate rules.
+
+---
+
+## 🔧 Configuration
+
+Default threshold:
+
+
+This means:
+If an IP sends more than 40 packets per second, it will be blocked.
+
+You can modify this value inside the script.
+
+---
+
+## ▶️ Requirements
+
+- Linux OS (iptables required)
+- Python 3.x
+- Root privileges
+- Scapy installed
+
+
+
